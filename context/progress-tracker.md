@@ -4,16 +4,17 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Current Phase
 
-- Phase 2: Editor Chrome
+- Phase 3: Authentication
 
 ## Current Goal
 
-- Build editor navbar, project sidebar, and dialog pattern per 02-editor spec.
+- Wire Clerk into Next.js app: provider, auth pages, redirects, route protection, and user menu.
 
 ## Completed
 
 - 01-design-system: shadcn/ui initialized, 7 components added (Button, Card, Dialog, Input, Tabs, Textarea, ScrollArea), cn() helper in lib/utils.ts, lucide-react installed, dark-only theme with project design tokens in globals.css.
 - 02-editor: EditorNavbar (fixed top bar, sidebar toggle with PanelLeftOpen/Close icons, left/center/right sections), ProjectSidebar (floating overlay, slide-in animation, Tabs with My Projects/Shared + empty states, New Project button), Dialog pattern ready via shadcn (DialogHeader/Title/Description/Footer/Content exports).
+- 03-auth: ClerkProvider wraps root layout with dark theme and CSS variable overrides. proxy.ts at root protects all routes except /, /sign-in, /sign-up. Sign-in and sign-up pages with two-panel layout (branding left, form right on large screens, form-only on small). Home page redirects authenticated users to /editor, unauthenticated to /sign-in. UserButton added to editor navbar right section. @clerk/ui installed. Build passes.
 
 ## In Progress
 
@@ -21,7 +22,7 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Next Up
 
-- Next feature spec (03).
+- Next feature spec (04).
 
 ## Open Questions
 

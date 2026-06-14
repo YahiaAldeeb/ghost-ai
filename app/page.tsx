@@ -1,9 +1,12 @@
+import { auth } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
 
+export default async function Home() {
+  const { userId } = await auth();
 
-export default function Home() {
-  return (
-    <div className="flex min-h-screen items-center justify-center">
-      <h1>Ghost AI</h1>
-    </div>
-  );
+  if (userId) {
+    redirect("/editor");
+  } else {
+    redirect("/sign-in");
+  }
 }

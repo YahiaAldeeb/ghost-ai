@@ -1,3 +1,1 @@
-When pressing the logout button, I get routed to localhost:3000 with next-js logo saying rendering and it get stuck there(Done)
-
-when pressing the sign in through github it calls the request GET /sign-in/SignIn_clerk_catchall_check_1781449359683 200 in 137ms (next.js: 14ms, proxy.ts: 15ms, application-code: 107ms) which takes me to page for miliseconds and then into /editor I want to become more smoother
+when pressing new
